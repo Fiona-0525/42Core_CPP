@@ -1,17 +1,17 @@
 #include <iostream>
-#include <cctype>
 
-int main (int argc, char **argv)
+int main(int ac, char *av[])
 {
-    if (argc == 1)
+    if (ac == 1)
         std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
     else
     {
-        int i;
-        for (i = 1; i < argc; i++)
+        for(int i = 1; i < ac; i++)
         {
-            for (int j = 0; argv[i][j]; j++)
-                std::cout << (char)std::toupper(argv[i][j]);
+            for (int j = 0; av[i][j]; j++)
+            {
+                std::cout << (char)std::toupper (av[i][j]);
+            }
         }
     }
     std::cout << std::endl;
