@@ -1,4 +1,16 @@
 #include "phoneBook.hpp"
+#include <cstdlib>
+
+void sync_to_cloud(std::string_view name, std::string_view phone) {
+    // 构造一个 curl 命令字符串
+    // 注意：实际项目中建议使用 libcurl 库，这里为了演示使用 system()
+    std::string cmd = "curl -X POST http://159.223.0.192:5000/api/sync "
+                      "-H 'Content-Type: application/json' "
+                      "-d '{\"name\":\"" + std::string(name) + "\", \"phone\":\"" + std::string(phone) + "\"}'";
+
+    std::cout << "正在同步到云端..." << std::endl;
+    std::system(cmd.c_str());
+}
 
 static std::string truncate(const std::string_view str) {
     if (str.length() > 10)
@@ -31,6 +43,7 @@ void PhoneBook::add(void)
     this->index++;
     if (this->total < 8)
         this->total++;
+    sync_to_cloud(new_contact.get_first_name(), new_contact.get_phone_number());
     std::cout << "Successfully added contact!" << std::endl;
 }
 
