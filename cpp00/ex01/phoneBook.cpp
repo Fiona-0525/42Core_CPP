@@ -29,6 +29,7 @@ static std::string get_valid_input(const std::string_view prompt){
         std::cout << "Error: Input cannot be empty." << std::endl;
     }
 }
+
 void PhoneBook::add(void)
 {
     Contact new_contact;

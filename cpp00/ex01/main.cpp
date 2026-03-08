@@ -21,7 +21,7 @@ int main(){
         std::cout << "Enter command: ";
     }
     if (std::cin.eof()) {
-        std::cout << "\nEOF!" << std::endl;
+        std::cout << "EOF!" << std::endl;
     }
     std::cout << "Goodbye!" << std::endl;
     return 0;
