@@ -23,3 +23,8 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re
+
+test: $(NAME)
+	./$(NAME) | sed 's/\[.*\] //' > my_output.txt
+	sed 's/\[.*\] //' 19920104_091532.log > log_output.txt
+	diff my_output.txt log_output.txt > diff_output.txt
