@@ -1,4 +1,6 @@
-*.o
-*.sh
 .vscode
-../*.txt
+.json
+*.o
+
+settings.json
+vscode
