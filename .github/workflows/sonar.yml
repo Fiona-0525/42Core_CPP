@@ -1,28 +1,29 @@
 name: SonarCloud
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    types: [opened, synchronize, reopened]
-jobs:
-  build:
-    name: Build and analyze
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0  # 浅克隆会导致扫描不准确，必须设为 0
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened]
 
-      - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub 自动提供，无需手动设置
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        with:
-          args: >
-            -Dsonar.organization=fiona-87327
-            -Dsonar.projectKey=42Core_CPP
-            -Dsonar.sources=.
-            -Dsonar.cxx.file.suffixes=.cpp,.hpp
-            -Dsonar.cpp.file.suffixes=.cpp,.hpp
+jobs:
+  build:
+    name: Build and analyze
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        with:
+          args: >
+            -Dsonar.organization=fiona-87327
+            -Dsonar.projectKey=42Core_CPP
+            -Dsonar.sources=.
+            -Dsonar.cxx.file.suffixes=.cpp,.hpp
+            -Dsonar.cpp.file.suffixes=.cpp,.hpp
