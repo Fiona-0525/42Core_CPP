@@ -10,26 +10,23 @@ jobs:
   build:
     name: Build and analyze
     runs-on: ubuntu-latest
-    
-    # 在这里添加环境变量，强制使用 Node 24 消除警告
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
-
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: SonarCloud Scan
-        uses: sonarsource/sonarqube-scan-action@master
+        uses: sonarsource/sonarqube-scan-action@v3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
           args: >
             -Dsonar.organization=fiona-87327
-            -Dsonar.projectKey=42Core_CPP
+            -Dsonar.projectKey=Fiona-0525_42Core_CPP
             -Dsonar.sources=.
-            -Dsonar.cxx.file.suffixes=.cpp,.hpp
-            -Dsonar.cpp.file.suffixes=.cpp,.hpp
+            -Dsonar.cxx.file.suffixes=.cpp,.hpp,.h
+            -Dsonar.sourceEncoding=UTF-8
             -Dsonar.host.url=https://sonarcloud.io
