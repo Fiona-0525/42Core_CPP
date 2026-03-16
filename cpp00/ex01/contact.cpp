@@ -1,23 +1,23 @@
 #include "contact.hpp"
 
-void Contact::set_first_name(const std::string_view _first_name){
-    this->_first_name = _first_name;
+void Contact::set_first_name(const std::string_view first_name){
+    this->_first_name = first_name;
 }
 
-void Contact::set_last_name(const std::string_view _last_name){
-    this->_last_name = _last_name;
+void Contact::set_last_name(const std::string_view last_name){
+    this->_last_name = last_name;
 }
 
-void Contact::set_nickname(const std::string_view _nickname){
-    this->_nickname = _nickname;
+void Contact::set_nickname(const std::string_view nickname){
+    this->_nickname = nickname;
 }
 
-void Contact::set_phone_number(const std::string_view _phone_number){
-    this->_phone_number = _phone_number;
+void Contact::set_phone_number(const std::string_view phone_number){
+    this->_phone_number = phone_number;
 }
 
-void Contact::set_darkest_secret(const std::string_view _darkest_secret){
-    this->_darkest_secret = _darkest_secret;
+void Contact::set_darkest_secret(const std::string_view darkest_secret){
+    this->_darkest_secret = darkest_secret;
 }
 
 std::string Contact::get_first_name(void) const{
