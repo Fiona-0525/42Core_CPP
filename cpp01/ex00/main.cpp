@@ -1,4 +1,3 @@
-#include <iostream>
 #include "Zombie.hpp"
 
 Zombie* newZombie(std::string name);
@@ -9,7 +8,8 @@ int main(){
 	heap->announce();
 	delete heap;
 
-	randomChump("StackZombie");
+	std:: cout << " " << std::endl;
 
+	randomChump("StackZombie");
 	return 0;
 }
