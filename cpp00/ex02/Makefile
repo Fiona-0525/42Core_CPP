@@ -4,7 +4,7 @@ SRCS = Account.cpp tests.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -std=c++17
 
 all: $(NAME)
 
@@ -18,7 +18,7 @@ clean:
 	rm -f $(OBJS)
 
 fclean: clean
-	rm -f $(NAME)
+	rm -f $(NAME) *.txt
 
 re: fclean all
 
