@@ -9,7 +9,7 @@
 
 class PhoneBook {
 private:
-    std::array <Contact, 8> contacts;
+    Contact contacts[8];
     int index = 0;
     int total = 0;
 
