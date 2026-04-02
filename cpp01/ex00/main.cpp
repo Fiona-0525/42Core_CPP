@@ -1,15 +1,9 @@
 #include "Zombie.hpp"
 
-Zombie* newZombie(std::string name);
-void randomChump(std::string name);
-
-int main(){
-	Zombie* heap = newZombie("HeapZombie");
-	heap->announce();
-	delete heap;
-
-	std:: cout << " " << std::endl;
-
-	randomChump("StackZombie");
-	return 0;
+int main()
+{
+	Zombie* new_zombie = newZombie("new_zombie");
+	randomChump("random_chump");
+	delete new_zombie;
+	return (0);
 }
