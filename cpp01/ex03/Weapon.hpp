@@ -4,8 +4,12 @@
 #include <string>
 
 class Weapon {
-private:
-    std::string type;
+private: std::string _type;
+
+public:
+    Weapon(std::string type);
+    const std::string &getType() const;
+    void setType(std::string newType);
 };
 
 #endif

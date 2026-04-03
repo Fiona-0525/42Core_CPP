@@ -1,6 +1,6 @@
-NAME = weapon
+NAME = sed_is_for_losers
 
-SRCS = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
+SRCS = main.cpp replaceall.cpp 
 
 OBJS = $(SRCS:.cpp=.o)
 
@@ -17,7 +17,7 @@ clean:
 	rm -f $(OBJS)
 
 fclean: clean
-	rm -f $(NAME)
+	rm -f $(NAME) *.txt *.replace
 
 re: fclean all
 
