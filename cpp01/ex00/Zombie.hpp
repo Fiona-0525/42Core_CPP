@@ -6,12 +6,13 @@
 class Zombie {
 	private:
 	std::string name;
+	std::string type;
 
 	public:
 	Zombie(void);
 	~Zombie(void);
 	void announce(void);
-	void setName(std::string n);
+	void setName(std::string n, std::string t = "stack");
 };
 
 Zombie* newZombie( std::string name );
