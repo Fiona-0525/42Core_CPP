@@ -12,7 +12,7 @@ class Zombie {
 	Zombie(void);
 	~Zombie(void);
 	void announce(void);
-	void setName(std::string n, std::string t = "stack");
+	void setName(std::string_view n, std::string_view t = "stack");
 };
 
 Zombie* newZombie( std::string name );

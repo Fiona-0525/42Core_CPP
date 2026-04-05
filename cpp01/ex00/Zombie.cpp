@@ -14,7 +14,7 @@ void Zombie::announce(void)
 	std::cout << name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
 
-void Zombie::setName(std::string n, std::string t)
+void Zombie::setName(std::string_view n, std::string_view t)
 {
 	name = n;
 	type = t;
