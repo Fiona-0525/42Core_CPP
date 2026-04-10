@@ -2,17 +2,17 @@
 # define ZOMBIE_HPP
 #include <string>
 #include <iostream>
+#include <string_view>
 
 class Zombie {
-	private:
+private:
 	std::string _name;
 	std::string _type;
 
-	public:
-	Zombie(void);
+public:
+	Zombie(std::string name);
 	~Zombie(void);
 	void announce(void) const;
-	void setName(std::string_view n);
 };
 
 Zombie* newZombie( std::string name );
