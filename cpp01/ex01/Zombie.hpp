@@ -8,7 +8,7 @@ private:
     std::string _name;
 
 public:
-    Zombie() = default;
+    Zombie();
     ~Zombie();
     Zombie(std::string name);
     void setName(std::string_view name);
