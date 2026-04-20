@@ -1,5 +1,6 @@
 #ifndef FIXED_HPP
 # define FIXED_HPP
+#include <cmath>
 # include <iostream>
 
 class Fixed {
@@ -13,8 +14,15 @@ public:
     Fixed(const Fixed &other);
     Fixed &operator=(const Fixed &other);
 
+    Fixed(const int value);
+    Fixed(const float value);
+    float toFloat(void) const;
+    int toInt(void) const;
+
     void setRawBits(int const raw);
     int  getRawBits(void) const;
 };
+
+std::ostream &operator<<(std::ostream &output, const Fixed &fixed);
 
 #endif

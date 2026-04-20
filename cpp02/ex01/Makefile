@@ -1,4 +1,4 @@
-NAME = fixed0
+NAME = fixed1
 
 SRCS = main.cpp Fixed.cpp
 
