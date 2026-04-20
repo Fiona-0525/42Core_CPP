@@ -2,7 +2,6 @@
 # define ZOMBIE_HPP
 #include <string>
 #include <iostream>
-#include <string_view>
 
 class Zombie {
 private:
