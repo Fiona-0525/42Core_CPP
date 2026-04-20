@@ -12,17 +12,17 @@ public:
     Fixed& operator=(const Fixed& other);
     ~Fixed();
 
-    bool operator>(const Fixed rhs) const;
-    bool operator<(const Fixed rhs) const;
-    bool operator>=(const Fixed rhs) const;
-    bool operator<=(const Fixed rhs) const;
-    bool operator==(const Fixed rhs) const;
-    bool operator!=(const Fixed rhs) const;
+    bool operator>(const Fixed& rhs) const;
+    bool operator<(const Fixed& rhs) const;
+    bool operator>=(const Fixed& rhs) const;
+    bool operator<=(const Fixed& rhs) const;
+    bool operator==(const Fixed& rhs) const;
+    bool operator!=(const Fixed& rhs) const;
 
-    Fixed operator+(const Fixed rhs) const;
-    Fixed operator-(const Fixed rhs) const;
-    Fixed operator*(const Fixed rhs) const;
-    Fixed operator/(const Fixed rhs) const;
+    Fixed operator+(const Fixed& rhs) const;
+    Fixed operator-(const Fixed& rhs) const;
+    Fixed operator*(const Fixed& rhs) const;
+    Fixed operator/(const Fixed& rhs) const;
 
     Fixed& operator++();
     Fixed operator++(int);
@@ -40,7 +40,7 @@ public:
     int toInt() const;
 
 private:
-    int _value;
+    int _value = 0;
     static const int _fractionalBits = 8;
 };
 

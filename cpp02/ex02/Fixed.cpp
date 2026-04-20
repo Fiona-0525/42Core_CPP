@@ -17,43 +17,43 @@ Fixed& Fixed::operator=(const Fixed& other) {
 
 Fixed::~Fixed() {}
 
-bool Fixed::operator>(const Fixed rhs) const {
+bool Fixed::operator>(const Fixed& rhs) const {
     return _value > rhs._value;
 }
 
-bool Fixed::operator<(const Fixed rhs) const {
+bool Fixed::operator<(const Fixed& rhs) const {
     return _value < rhs._value;
 }
 
-bool Fixed::operator>=(const Fixed rhs) const {
+bool Fixed::operator>=(const Fixed& rhs) const {
     return _value >= rhs._value;
 }
 
-bool Fixed::operator<=(const Fixed rhs) const {
+bool Fixed::operator<=(const Fixed& rhs) const {
     return _value <= rhs._value;
 }
 
-bool Fixed::operator==(const Fixed rhs) const {
+bool Fixed::operator==(const Fixed& rhs) const {
     return _value == rhs._value;
 }
 
-bool Fixed::operator!=(const Fixed rhs) const {
+bool Fixed::operator!=(const Fixed& rhs) const {
     return _value != rhs._value;
 }
 
-Fixed Fixed::operator+(const Fixed rhs) const {
+Fixed Fixed::operator+(const Fixed& rhs) const {
     return Fixed(toFloat() + rhs.toFloat());
 }
 
-Fixed Fixed::operator-(const Fixed rhs) const {
+Fixed Fixed::operator-(const Fixed& rhs) const {
     return Fixed(toFloat() - rhs.toFloat());
 }
 
-Fixed Fixed::operator*(const Fixed rhs) const {
+Fixed Fixed::operator*(const Fixed& rhs) const {
     return Fixed(toFloat() * rhs.toFloat());
 }
 
-Fixed Fixed::operator/(const Fixed rhs) const {
+Fixed Fixed::operator/(const Fixed& rhs) const {
     return Fixed(toFloat() / rhs.toFloat());
 }
 
