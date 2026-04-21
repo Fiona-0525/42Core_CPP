@@ -1,12 +1,11 @@
 #include "Zombie.hpp"
 
-Zombie::Zombie(){
-    _name = ""; // redundant for std::string
+Zombie::Zombie() :_name() {
 }
 
-Zombie::Zombie(const std::string_view  name){
-    _name = name;
-}
+// Zombie::Zombie(const std::string_view  name){
+//     _name = name;
+// }
 
 Zombie::~Zombie() {
     std::cout << _name << " is destroyed." << std::endl;

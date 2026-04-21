@@ -10,7 +10,7 @@ private:
 public:
     Zombie();
     ~Zombie();
-    Zombie(const std::string_view name);
+    // Zombie(const std::string_view name);
     void setName(const std::string_view name);
     void announce () const;
 };
