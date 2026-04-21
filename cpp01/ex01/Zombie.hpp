@@ -1,7 +1,7 @@
 #ifndef ZOMBIE_HPP
 #define ZOMBIE_HPP
 #include <iostream>
-#include <string>
+#include <string_view>
 
 class Zombie {
 private:
@@ -10,11 +10,11 @@ private:
 public:
     Zombie();
     ~Zombie();
-    Zombie(std::string name);
-    void setName(std::string_view name);
+    Zombie(const std::string_view name);
+    void setName(const std::string_view name);
     void announce () const;
 };
 
-Zombie* zombieHorde(int N, std::string name);
+Zombie* zombieHorde(int N, const std::string_view name);
 
 #endif

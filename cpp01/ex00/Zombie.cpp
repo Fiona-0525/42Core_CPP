@@ -1,8 +1,7 @@
 #include "Zombie.hpp"
 
-Zombie::Zombie(std::string name){
-	_name = name;
-}
+Zombie::Zombie(std::string_view name) : _name(name) {
+} //Initializer List 
 
 Zombie::~Zombie(void)
 {

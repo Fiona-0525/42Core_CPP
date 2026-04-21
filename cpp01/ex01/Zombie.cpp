@@ -1,10 +1,10 @@
 #include "Zombie.hpp"
 
 Zombie::Zombie(){
-    _name = "";
+    _name = ""; // redundant for std::string
 }
 
-Zombie::Zombie(std::string name){
+Zombie::Zombie(const std::string_view  name){
     _name = name;
 }
 
@@ -16,6 +16,6 @@ void Zombie::announce() const {
     std::cout << _name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
 
-void Zombie::setName(std::string_view n) {
+void Zombie::setName(const std::string_view n) {
     _name = n;
 }
