@@ -29,10 +29,7 @@ int main(int ac, char **av)
     
     std::ofstream ofs(filename + ".replace");
     if (ofs) 
-    {
         ofs << result;
-        ofs.close();
-    }
     else
     {
         std::cerr << "Error: Could not create output file " << filename << ".replace" << std::endl;
