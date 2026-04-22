@@ -12,20 +12,17 @@ int main(int ac, char **av)
     
     std::string fullContent;
     std::ifstream ifs(filename);
-    if (ifs.is_open()) 
-    {
-        std::string line;
-        while (std::getline(ifs, line)){
-            fullContent += line;
-            if (!ifs.eof())
-                fullContent += "\n";
-        }
-        ifs.close();
-    }
-    if (!ifs) 
+    if (!ifs.is_open()) 
     {
         std::cerr << "Error: Could not open file " << filename << std::endl;
         return 1;
+    }
+    
+    std::string line;
+    while (std::getline(ifs, line)){
+        fullContent += line;
+        if (!ifs.eof())
+            fullContent += "\n";
     }
 
     std::string result = replaceall(fullContent, s1, s2);
