@@ -28,7 +28,7 @@ jobs:
         with:
           args: >
             -Dsonar.organization=fiona-87327
-            -Dsonar.projectKey=Fiona-0525_42Core_CPP
+            -Dsonar.projectKey=jiyan-0525_42Core_CPP
             -Dsonar.sources=.
             -Dsonar.inclusions=cpp**/**
             -Dsonar.cxx.file.suffixes=.cpp,.hpp,.h
