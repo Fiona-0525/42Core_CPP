@@ -14,7 +14,7 @@ public:
 
 private:
     int              _value = 0;
-    static const int bits_ = 8;
+    static const int _bits = 8;
 };
 
 #endif
