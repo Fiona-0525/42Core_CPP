@@ -1,4 +1,4 @@
-NAME = now_we_are_talking
+NAME = fixed2
 
 SRCS = main.cpp Fixed.cpp
 

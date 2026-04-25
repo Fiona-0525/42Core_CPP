@@ -1,6 +1,6 @@
 #include "Fixed.hpp"
 
-Fixed::Fixed() : _value(0) {}
+Fixed::Fixed() {}
 
 Fixed::Fixed(const int value) : _value(value << _fractionalBits) {}
 
