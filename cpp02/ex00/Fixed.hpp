@@ -14,7 +14,7 @@ public:
 
 private:
     int             _value = 0;
-    static int const fractional = 8;
+    static int const _fractionalBits = 8;
 };
 
 #endif
