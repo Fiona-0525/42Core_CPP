@@ -21,12 +21,10 @@ Each module covers specific C++ concepts:
 - Member functions and access specifiers
 - Operator overloading
 - Inheritance and virtual functions
-- Exception handling
-- Standard Template Library (STL) basics
 
 ## 🛠️ Prerequisites
 
-- C++98 standard or later
+- C++98/C++17 standard or later
 - A C++ compiler (g++, clang++, etc.)
 - Make (for build automation)
 
@@ -76,12 +74,6 @@ Abstract classes, pure virtual functions, and interfaces.
 - ✅ Inheritance and virtual functions
 - ✅ Memory management
 - ✅ Best practices and 42 School coding standards
-
-## 📝 Notes
-
-- All projects follow 42 School coding standards (Norm)
-- Implementations use C++98 standard
-- Each module builds on concepts from previous modules
 
 ## 👤 Author
 
